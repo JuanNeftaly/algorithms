@@ -1,0 +1,27 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "C++ Launch (GDB)",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/Merge.exe", // Cambia esto si tu archivo ejecutable tiene otro nombre
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": true, // Usa consola externa si lo prefieres
+			"MIMode": "gdb",
+			"miDebuggerPath": "C:/MinGW/bin/gdb.exe", // Asegúrate de que esta ruta sea correcta
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			],
+			"preLaunchTask": "build", // Asume que tienes una tarea de compilación configurada
+			"internalConsoleOptions": "neverOpen"
+		}
+	]
+}
